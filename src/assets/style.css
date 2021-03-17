@@ -1,0 +1,91 @@
+.drawing{
+    display: flex;
+}
+.canvas{
+    background-color: #eee;
+}
+.canvas[data-cursor='pen']{
+    cursor: url('img/pen.ico'), auto;
+}
+.canvas[data-cursor='eraser']{
+    cursor: url('img/eraser.ico'), auto;
+}
+.canvas[data-cursor='clean']{
+    cursor: url('img/clean.ico'), auto;
+}
+.canvas[data-cursor='straw']{
+    cursor: url('img/straw.ico'), auto;
+}
+.tool{
+    width: 160px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    background-color: #eee;
+    padding: 10px;
+    border-left:1px solid #fff
+}
+.tool-icon{
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    padding: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    border: 2px solid transparent;
+    border-radius: 3px;
+}
+.tool-icon:hover{
+    border-color: #a1d9fe;
+}
+.pen{
+    background-image:url('./img/pen.ico');
+}
+.eraser{
+    background-image:url('./img/eraser.ico');
+}
+.clean{
+    background-image:url('./img/clean.ico');
+}
+.straw{
+    background-image:url('./img/straw.ico');
+}
+.tool-icon input[type="radio"]{
+    -webkit-appearance:none;
+    outline:none;
+    width: 24px;
+    height: 24px;
+    margin:0 auto;
+}
+.tool-icon input:checked{
+    background-color: #a1d9fe;
+}
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.file:not(:last-child){
+    margin-right: 10px;
+}
